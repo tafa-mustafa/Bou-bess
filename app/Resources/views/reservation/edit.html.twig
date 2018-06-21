@@ -1,0 +1,25 @@
+{% extends '@biblio/admin.html.twig' %}
+{% block body %}
+<div class="contenaire-fluid">
+ <div>
+    <h1>Modifier Une Réservation</h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" value="Edit" />
+    {{ form_end(edit_form) }}
+</div>
+<div>
+    <ul>
+        <li>
+            <a href="{{ path('reservation_index') }}">Back to the list</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+</div>
+</div>
+{% endblock %}
